@@ -1,6 +1,7 @@
-name: Build Multi-Platform 😎
+name: Build Multi-Platform
 
-on: [push]
+on:
+  workflow_dispatch: {}
 
 env:
   UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
