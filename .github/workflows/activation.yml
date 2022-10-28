@@ -1,4 +1,5 @@
-name: Acquire activation file
+name: Activation
+
 on:
   workflow_dispatch: {}
 jobs:
@@ -10,12 +11,12 @@ jobs:
       - name: Request manual activation file
         id: getManualLicenseFile
         uses: game-ci/unity-request-activation-file@v2
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v2
           env:
         UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
         UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-      - name: Expose as artifact
-        uses: actions/upload-artifact@v2
         with:
           name: ${{ steps.getManualLicenseFile.outputs.filePath }}
           path: ${{ steps.getManualLicenseFile.outputs.filePath }}
