@@ -1,6 +1,7 @@
-name: Build 😎
+name: Build WebGL 😎
 
-on: [push]
+on:
+  workflow_dispatch: {}
 
 env:
   UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
@@ -46,24 +47,6 @@ jobs:
         uses: game-ci/unity-builder@v2
         with:
           targetPlatform: WebGL
-
-      # Build StandaloneWindows
-      - name: Build project Windows
-        uses: game-ci/unity-builder@v2
-        with:
-          targetPlatform: StandaloneWindows
-
-      # Build Android
-      - name: Build project Android
-        uses: game-ci/unity-builder@v2
-        with:
-          targetPlatform: Android
-          # androidAppBundle: true
-          # androidKeystoreName: user.keystore
-          # androidKeystoreBase64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-          # androidKeystorePass: ${{ secrets.ANDROID_KEYSTORE_PASS }}
-          # androidKeyaliasName: ${{ secrets.ANDROID_KEYALIAS_NAME }}
-          # androidKeyaliasPass: ${{ secrets.ANDROID_KEYALIAS_PASS }}
 
       # Output
       - uses: actions/upload-artifact@v2
