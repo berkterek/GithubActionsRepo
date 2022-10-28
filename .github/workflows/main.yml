@@ -40,7 +40,9 @@ jobs:
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      UNITY_LICENSE: ${{ SC-QW3H-NXCX-JES3-D5FG-YDNH }}
+      UNITY_EMAIL: ${{ berk@algebra.global }}
+      UNITY_PASSWORD: ${{ mP4-141414 }}
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
 
@@ -48,9 +50,9 @@ jobs:
       - name: Build project
         uses: game-ci/unity-builder@v2
         env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+      UNITY_LICENSE: ${{ SC-QW3H-NXCX-JES3-D5FG-YDNH }}
+      UNITY_EMAIL: ${{ berk@algebra.global }}
+      UNITY_PASSWORD: ${{ mP4-141414 }}
         with:
           targetPlatform: WebGL
 
