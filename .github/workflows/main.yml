@@ -2,6 +2,11 @@ name: Build 😎
 
 on: [push]
 
+env:
+  UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+  UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+  UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+
 jobs:
   build:
     name: Build my project ✨
@@ -36,33 +41,24 @@ jobs:
           restore-keys: |
             Library-
 
+    steps:
       # Build WebGL
       - name: Build project WebGl
         uses: game-ci/unity-builder@v2
-        env:
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
           targetPlatform: WebGL
 
+    steps:
       # Build StandaloneWindows
       - name: Build project Windows
         uses: game-ci/unity-builder@v2
-        env:
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
           targetPlatform: StandaloneWindows
 
+    steps:
       # Build Android
       - name: Build project Android
         uses: game-ci/unity-builder@v2
-        env:
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
           targetPlatform: Android
           # androidAppBundle: true
@@ -72,6 +68,7 @@ jobs:
           # androidKeyaliasName: ${{ secrets.ANDROID_KEYALIAS_NAME }}
           # androidKeyaliasPass: ${{ secrets.ANDROID_KEYALIAS_PASS }}
 
+    steps:
       # Output
       - uses: actions/upload-artifact@v2
         with:
