@@ -6,15 +6,6 @@ using UnityEngine.TestTools;
 
 public class first_play_mode
 {
-    // A Test behaves as an ordinary method
-    [Test]
-    public void first_play_modeSimplePasses()
-    {
-        // Use the Assert class to test conditions
-    }
-
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
     [UnityTest]
     public IEnumerator first_play_modeWithEnumeratorPasses()
     {
