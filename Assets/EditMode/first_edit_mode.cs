@@ -10,6 +10,8 @@ public class first_edit_mode
     [Test]
     public void first_edit_modeSimplePasses()
     {
-        // Use the Assert class to test conditions
+        bool result = false;
+        
+        Assert.IsTrue(result);
     }
 }
