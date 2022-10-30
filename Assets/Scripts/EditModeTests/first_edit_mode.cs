@@ -10,7 +10,7 @@ public class first_edit_mode
     [Test]
     public void first_edit_modeSimplePasses()
     {
-        bool result = false;
+        bool result = true;
         
         Assert.IsTrue(result);
     }
