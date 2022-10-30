@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27179c3c-ec42-440d-b308-235e89523c95" name="Changes" comment="" />
+    <list default="true" id="27179c3c-ec42-440d-b308-235e89523c95" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/EditMode/first_edit_mode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EditMode/first_edit_mode.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666966326874</updated>
       <workItem from="1666966334880" duration="73000" />
-      <workItem from="1667138073036" duration="595000" />
+      <workItem from="1667138073036" duration="969000" />
     </task>
     <servers />
   </component>
