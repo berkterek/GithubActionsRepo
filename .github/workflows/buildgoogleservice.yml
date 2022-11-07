@@ -24,8 +24,8 @@ jobs:
           targetPlatform: Android
           androidAppBundle: true
           androidKeystoreName: GitHubActionDeneme # This file won't exist, but this property needs to exist.
-          versionName: "1.0.4"
-          versionCode: 68
+          generatedVersion: "1.0.4"
+          androidVersionCode: 69
           androidKeystoreBase64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
           androidKeystorePass: ${{ secrets.ANDROID_KEYSTORE_PASS }}
           androidKeyaliasName: ${{ secrets.ANDROID_KEYALIAS_NAME }}
