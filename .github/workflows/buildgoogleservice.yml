@@ -23,8 +23,8 @@ jobs:
         with:
           targetPlatform: Android
           androidAppBundle: true
-          #versioning: Semantic
-          version: "0.0.90"
+          versioning: Semantic
+          tag_name: "0.0.90"
           androidKeystoreName: GitHubActionDeneme # This file won't exist, but this property needs to exist.
           androidKeystoreBase64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
           androidKeystorePass: ${{ secrets.ANDROID_KEYSTORE_PASS }}
